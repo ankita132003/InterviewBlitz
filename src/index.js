@@ -3,11 +3,39 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+import ScheduleInterview from './ScheduleInterview';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+     <App/>
+    ),
+  },
+  {
+    path: "/scheduleInterview",
+    element: (
+      <ScheduleInterview/>
+    ),
+  },
+  {
+    path: "/joinMeeting",
+    element: <div>Join Meeting</div>
+  }
+]);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+     <RouterProvider router={router} />
+    {/* <App /> */}
   </React.StrictMode>
 );
 

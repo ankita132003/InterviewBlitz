@@ -1,36 +1,24 @@
 import React from "react";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+// import {logo} from "./logo2.png";
 const Header = () => {
   return (
     <>
-      <div style={{ height: "30%", padding: "10px" }}>
-        <div
-          className="container"
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
-          <div>
-            <img
-              src="logo2.png"
-              width={"40px"}
-              height={"35px"}
-              style={{ borderRadius: "50%" }}
-            />
-            <span
-              style={{
-                fontFamily: "sans-serif",
-                fontStyle: "italic",
-                fontWeight: 600,
-                marginLeft: "10px",
-              }}
-            >
-              INTERVIEW BLITZ
+      <div className="container mx-auto px-2 py-4 ">
+        <div className="flex justify-between">
+          <div className="flex">
+            <img src="logo2.png" className="w-10 h-10  rounded-full" />
+            <span className="font-sarif font-bold text-xl text-white px-2 grid justify-items-center items-center">
+              Interview Blitz
             </span>
           </div>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <button style={{background: "#ff1a75", border: "none", borderRadius: "10px", padding: "5px 10px" , fontFamily: "sans-serif", fontWeight: "600"}}  >login</button>
+          <div>
+            <button class="bg-pink-400 hover:bg-pink-500 px-4 py-1 font-sans text-white font-bold font-large rounded-full "> 
+              Login <FontAwesomeIcon icon={faArrowRight} />
+            </button>
           </div>
         </div>
-        <hr />
       </div>
     </>
   );
