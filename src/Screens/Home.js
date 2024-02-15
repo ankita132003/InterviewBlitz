@@ -13,7 +13,7 @@ const Home = () => {
       <div className="container mx-auto px-2 py-4 ">
         <div className="text-center text-white">
           <div className="text-4xl font-bold"> WELCOME TO INTERVIEW BLITZ</div>
-          <div className="font-serif py-2">
+          <div className="font-serif py-2 text-lg">
             Interview and Hiring in fast forword way...
           </div>
         </div>

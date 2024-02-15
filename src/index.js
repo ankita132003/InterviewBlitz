@@ -9,7 +9,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import ScheduleInterview from './ScheduleInterview';
+import ScheduleInterview from './Screens/ScheduleInterview';
 
 const router = createBrowserRouter([
   {
