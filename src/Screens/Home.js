@@ -17,7 +17,7 @@ const Home = () => {
             Interview and Hiring in fast forword way...
           </div>
         </div>
-        <div className=" lg:grid lg:grid-cols-4 md:grid md:grid-cols-1  gap-20 ">
+        <div className=" lg:grid lg:grid-cols-4 md:grid md:grid-cols-3 sm:grid-cols-1 gap-20 sm:mt-0 lg:mt-8">
           <a href="/scheduleInterview">
             <HomeCard
               icon={

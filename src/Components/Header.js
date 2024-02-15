@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { signInWithPopup, GoogleAuthProvider, onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { auth } from "../firebaseConfig"; // Import your Firebase configuration file
@@ -10,7 +10,24 @@ import { signOut } from "firebase/auth";
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   const provider = new GoogleAuthProvider();
+
+  useEffect(() => {
+    const getUser =() => {
+      onAuthStateChanged(auth, async (user) => {
+        if (user) {
+          setUser(user);
+          setLoading(false);
+        }
+        if (!user) {
+          setUser(null);
+          setLoading(false);
+        }
+      });
+    };
+    return getUser();
+  }, []);
 
   const login = async () => {
     signInWithPopup(auth, provider)
@@ -36,6 +53,7 @@ const Header = () => {
   const logout = () => {
     signOut(auth)
       .then(() => {
+        setUser(null);
         setIsLoggedIn(false);
         console.log("signout");
       })
@@ -46,7 +64,7 @@ const Header = () => {
 
   return (
     <>
-      {isLoggedIn ? (
+      {user? (
         <div className="container mx-auto px-2 py-4 ">
           <div className="flex justify-between">
             <div className="flex">
@@ -55,7 +73,7 @@ const Header = () => {
                 Interview Blitz
               </span>
             </div>
-            <a href="#">
+            <a href="/">
               <img
                 class="bg-pink-400 hover:bg-pink-500 h-10 w-10 rounded-full  "
                 src={user.photoURL} onClick={logout}
