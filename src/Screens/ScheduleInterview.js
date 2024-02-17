@@ -1,44 +1,30 @@
-import React, { useEffect, useState } from "react";
-import { auth } from "../firebaseConfig";
+import React from "react";
+import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Agenda, Inject } from '@syncfusion/ej2-react-schedule';
+import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
+import { UserLogin } from "../Authentication/UserLogin"; // Assuming useAuthentication is the custom hook for authentication
+import SetInterview from "../Components/SetInterview";
+
 
 const ScheduleInterview = () => {
-  // const [currentUser, setCurrentUser] = useState(null);
-  // const [loading, setLoading] = useState(true);
-
-  // useEffect(() => {
-  //   const getUser =() => {
-  //     auth.onAuthStateChanged(async (user) => {
-  //       if (user) {
-  //         console.log(user);
-  //         setLoading(false);
-  //         setCurrentUser(user);
-  //       } else {
-  //         setCurrentUser(null);
-  //         setLoading(false);
-  //       }
-  //     });
-  //   };
-  //   return getUser();
-  // }, []);
+  const { isLoggedIn, user, loading, login, logout } = UserLogin();
 
   return (
     <div>
-      {/* 
-      {currentUser ? (
+      {loading ? (
+        <div className="flex justify-center items-center h-screen">
+          <div className="w-13 h-13 border-4 border-t-4 border-blue-500 rounded-full animate-spin"></div>
+        </div>
+      ) : (
         <>
-          {loading ? (
-            <div className="flex justify-center items-center h-full">
-              <div className="w-16 h-16 border-4 border-t-4 border-gray-200 rounded-full animate-spin"></div>
+          {user ? (
+            <div>
+              <SetInterview/>
             </div>
           ) : (
-            <div>Schedule Interview</div>
+            <div>User Not Found</div>
           )}
         </>
-      ) : (
-        <div>User not found</div>
-      )} */}
- <div>User not found</div>
-      {/* {currentUser ? <div>Schedule interview</div> : <div> user not found</div>} */}
+      )}
     </div>
   );
 };
