@@ -1,0 +1,193 @@
+{
+    "tech_roles": [
+      {
+        "role": "Frontend Developer",
+        "defined_roles": [
+          {
+            "role_name": "UI/UX Designer",
+            "skills": [
+              {
+                "skill_name": "UI Design",
+                "topics_covered": ["Typography", "Color Theory", "Responsive Design"]
+              },
+              {
+                "skill_name": "Wireframing",
+                "topics_covered": ["Mockups", "Prototyping", "User Flows"]
+              }
+            ]
+          },
+          {
+            "role_name": "Frontend Engineer",
+            "skills": [
+              {
+                "skill_name": "HTML",
+                "topics_covered": ["Semantic Markup", "Accessibility", "Forms"]
+              },
+              {
+                "skill_name": "CSS",
+                "topics_covered": ["Flexbox", "Grid", "Animations"]
+              },
+              {
+                "skill_name": "JavaScript",
+                "topics_covered": ["ES6", "DOM Manipulation", "Ajax"]
+              },
+              {
+                "skill_name": "Frameworks/Libraries",
+                "topics_covered": ["React.js", "Angular", "Vue.js"]
+              },
+              {
+                "skill_name": "Version Control",
+                "topics_covered": ["Git", "GitHub", "GitLab"]
+              },
+              {
+                "skill_name": "Responsive Design",
+                "topics_covered": ["Media Queries", "Viewport Units", "Responsive Images"]
+              },
+              {
+                "skill_name": "Cross-Browser Compatibility",
+                "topics_covered": ["Testing", "Polyfills", "Fallbacks"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "role": "Backend Developer",
+        "defined_roles": [
+          {
+            "role_name": "Database Administrator",
+            "skills": [
+              {
+                "skill_name": "Database Management Systems",
+                "topics_covered": ["SQL", "NoSQL", "Database Design"]
+              },
+              {
+                "skill_name": "Query Optimization",
+                "topics_covered": ["Indexing", "Query Tuning", "Normalization"]
+              },
+              {
+                "skill_name": "Backup/Recovery",
+                "topics_covered": ["Scheduled Backups", "Point-in-Time Recovery", "Replication"]
+              }
+            ]
+          },
+          {
+            "role_name": "Backend Engineer",
+            "skills": [
+              {
+                "skill_name": "Server-side Programming",
+                "topics_covered": ["Node.js", "Python", "Java"]
+              },
+              {
+                "skill_name": "API Development",
+                "topics_covered": ["RESTful", "GraphQL", "API Security"]
+              },
+              {
+                "skill_name": "Authentication/Authorization",
+                "topics_covered": ["JWT", "OAuth", "Sessions"]
+              },
+              {
+                "skill_name": "Caching Strategies",
+                "topics_covered": ["CDN", "Redis", "Memcached"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "role": "Full Stack Developer",
+        "defined_roles": [
+          {
+            "role_name": "MERN Stack Developer",
+            "skills": [
+              {
+                "skill_name": "MongoDB",
+                "topics_covered": ["CRUD Operations", "Data Modeling", "Aggregation Framework"]
+              },
+              {
+                "skill_name": "Express.js",
+                "topics_covered": ["Routing", "Middleware", "Error Handling"]
+              },
+              {
+                "skill_name": "React.js",
+                "topics_covered": ["Component Lifecycle", "State Management", "Hooks"]
+              },
+              {
+                "skill_name": "Node.js",
+                "topics_covered": ["Event Loop", "Async Programming", "Package Management"]
+              },
+              {
+                "skill_name": "DevOps Fundamentals",
+                "topics_covered": ["CI/CD", "Containerization", "Infrastructure as Code"]
+              }
+            ]
+          },
+          {
+            "role_name": "MEAN Stack Developer",
+            "skills": [
+              {
+                "skill_name": "MongoDB",
+                "topics_covered": ["CRUD Operations", "Data Modeling", "Aggregation Framework"]
+              },
+              {
+                "skill_name": "Express.js",
+                "topics_covered": ["Routing", "Middleware", "Error Handling"]
+              },
+              {
+                "skill_name": "Angular",
+                "topics_covered": ["Components", "Services", "Routing"]
+              },
+              {
+                "skill_name": "Node.js",
+                "topics_covered": ["Event Loop", "Async Programming", "Package Management"]
+              },
+              {
+                "skill_name": "Microservices Architecture",
+                "topics_covered": ["Service Discovery", "Load Balancing", "Fault Tolerance"]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "role": "Tester",
+        "defined_roles": [
+          {
+            "role_name": "Manual Tester",
+            "skills": [
+              {
+                "skill_name": "Test Planning",
+                "topics_covered": ["Test Cases", "Test Execution", "Defect Management"]
+              },
+              {
+                "skill_name": "Regression Testing",
+                "topics_covered": ["Smoke Testing", "Functional Testing", "Integration Testing"]
+              },
+              {
+                "skill_name": "Exploratory Testing",
+                "topics_covered": ["Ad Hoc Testing", "Scenario-based Testing", "Session-based Testing"]
+              }
+            ]
+          },
+          {
+            "role_name": "Automation Tester",
+            "skills": [
+              {
+                "skill_name": "Test Automation Tools",
+                "topics_covered": ["Selenium", "Cypress", "JUnit"]
+              },
+              {
+                "skill_name": "Scripting Languages",
+                "topics_covered": ["Python", "JavaScript", "Java"]
+              },
+              {
+                "skill_name": "Continuous Integration",
+                "topics_covered": ["Jenkins", "Travis CI", "CircleCI"]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
